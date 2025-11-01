@@ -1,0 +1,38 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Environnement
+.env
+.env.local
+.env.development
+.env.production
+
+# Firebase (TRÈS IMPORTANT !)
+service-account.json
+firebase.json
+.firebaserc
+
+# Build / Dist
+dist/
+build/
+*.apk
+*.aab
+
+# Logs
+logs/
+*.log
+
+# OS / Éditeurs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Render / Déploiement
+.render/

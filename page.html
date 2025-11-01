@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Check-in</title>
+  </head>
+  <body>
+    <form id="form">
+      Room: <input type="number" id="room" min="1" max="20" required /><br />
+      Guest: <input type="text" id="name" required /><br />
+      <button type="submit">Send</button>
+    </form>
+
+    <script>
+      document.getElementById("form").onsubmit = async (e) => {
+        e.preventDefault();
+        const room = document.getElementById("room").value;
+        const name = document.getElementById("name").value.trim();
+        await fetch("https://YOUR-API.onrender.com/checkin", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ roomId: room, guestName: name }),
+        });
+        alert("Sent!");
+      };
+    </script>
+  </body>
+</html>
